@@ -1,40 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# ShadowVerse.ai
+
+ShadowVerse.ai is an AI-powered chatbot inspired by Sung Jin-Woo from the popular web novel and anime *Solo Leveling*. This project combines a modern frontend interface with the power of OpenAI's language model to simulate the cold, commanding tone of the Shadow Monarch.
+
+## Overview
+
+The goal of ShadowVerse.ai is to provide users with an immersive conversational experience where the chatbot responds in the distinct style of Sung Jin-Woo. The project uses Next.js for the frontend and Node.js with Express for API routing. GPT-4 (via OpenAI API) generates dynamic responses based on user input.
+
+## Features
+
+- AI-generated responses powered by OpenAI (GPT-4)
+- Custom-styled frontend that mimics a messaging app
+- Responsive design with dynamic typing indicator
+- Persona adaptation using system-level prompt engineering
+- Clean and modular full-stack architecture
+
+## Tech Stack
+
+- **Frontend**: React (via Next.js), CSS
+- **Backend**: Node.js, Express
+- **AI Integration**: OpenAI API (GPT-4)
+- **Environment Management**: dotenv
+
+## Folder Structure
+
+```
+
+jinwoo-bot/
+├── pages/            # Frontend pages
+│   └── index.js      # Main chat interface
+├── styles/
+│   └── globals.css   # Global stylesheet
+├── api/
+│   └── chat.js       # API route for chat
+├── .env              # Environment variables
+├── server.js         # Optional custom server
+├── package.json
+└── README.md
+
+````
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/your-username/shadowverse.ai.git
+cd shadowverse.ai
+````
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Configure environment variables**
+
+Create a `.env` file in the root directory and add your OpenAI API key:
+
+```
+OPENAI_API_KEY=your-openai-api-key
+```
+
+4. **Start the development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be available at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## AI Persona
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The chatbot uses a system-level prompt to simulate Sung Jin-Woo’s tone:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+> "You are Sung Jin-Woo, the Shadow Monarch. Your speech is concise, assertive, and emotionless. You do not ask questions. You speak with authority and clarity."
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This enables the bot to maintain a consistent and realistic persona throughout the conversation.
 
-## Learn More
+## Future Improvements
 
-To learn more about Next.js, take a look at the following resources:
+* Fine-tune prompt handling for more accurate personality
+* Add voice interaction (text-to-speech)
+* Deploy on Vercel or another cloud platform
+* Optimize UI for mobile devices
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
