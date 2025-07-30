@@ -39,6 +39,9 @@ jinwoo-bot/
 
 ````
 
+## Demo video
+![ShadowVerse AI Demo](https://github.com/user-attachments/assets/8fec08da-7246-4e31-b056-b26618cf7a4a)
+
 ## Getting Started
 
 1. **Clone the repository**
